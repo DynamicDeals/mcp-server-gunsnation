@@ -1,6 +1,19 @@
 # Gunsnation MCP Server
 
-An MCP (Model Context Protocol) server that provides access to the Gunsnation firearms database API for AI assistants like Claude.
+The Gunsnation MCP Server is a lightweight integration layer that exposes the Gunsnation firearms catalog to AI assistants through the Model Context Protocol (MCP). It allows compatible AI clients to search, filter, and retrieve detailed firearm information using structured tool calls instead of manual API integration.
+
+Designed for speed and simplicity, the server connects directly to the Gunsnation API and provides a clean, standardized interface for querying products by brand, model, UPC, or category. Assistants can also fetch full specifications, images, and metadata for individual firearms, making it ideal for retail, comparison, and product discovery workflows.
+
+Built in TypeScript and distributed as an npm package, the server is easy to install and run locally or in hosted environments. With just an API key and an MCP-compatible client, developers can quickly add real-time firearm data access to their AI tools.
+
+Key features
+	•	MCP-compatible firearm search and lookup tools
+	•	Real-time access to the Gunsnation product catalog
+	•	Simple installation via npm or npx
+	•	Lightweight, developer-friendly TypeScript codebase
+	•	Secure API-key authentication
+
+This project is ideal for developers building AI shopping assistants, retail tools, or product discovery experiences that require up-to-date firearm data from Gunsnation.
 
 ## Features
 
