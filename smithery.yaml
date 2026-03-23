@@ -1,0 +1,18 @@
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    required:
+      - gunsnationApiKey
+    properties:
+      gunsnationApiKey:
+        type: string
+        description: "API key for accessing the Gunsnation firearms catalog"
+  commandFunction: |-
+    (config) => ({
+      command: 'node',
+      args: ['dist/index.js'],
+      env: {
+        GUNSNATION_API_KEY: config.gunsnationApiKey
+      }
+    })

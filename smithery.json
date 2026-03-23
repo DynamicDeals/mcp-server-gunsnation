@@ -1,0 +1,17 @@
+{
+  "name": "Gunsnation MCP Server",
+  "description": "AI-ready MCP server for real-time access to the Gunsnation firearms catalog — product search and firearm specifications.",
+  "tags": ["firearms", "catalog", "search", "e-commerce"],
+  "vendor": "DynamicDeals",
+  "sourceUrl": "https://github.com/DynamicDeals/mcp-server-gunsnation",
+  "tools": [
+    {
+      "name": "search_firearms",
+      "description": "Search the Gunsnation catalog for firearms by name, category, or specifications"
+    },
+    {
+      "name": "get_firearm",
+      "description": "Get detailed specifications for a specific firearm by ID"
+    }
+  ]
+}
