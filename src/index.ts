@@ -3,28 +3,12 @@
 import { GunsnationMcpServer } from './server';
 
 async function main() {
-  const apiKey = process.env.GUNSNATION_API_KEY;
+  const apiKey = process.env.GUNSNATION_API_KEY || '';
+  const apiUrl = process.env.GUNSNATION_API_URL;
 
   if (!apiKey) {
-    console.error('Error: GUNSNATION_API_KEY environment variable is required');
-    console.error('');
-    console.error('Usage:');
-    console.error('  GUNSNATION_API_KEY=your_key npx gunsnation-mcp');
-    console.error('');
-    console.error('Or in Claude Desktop config:');
-    console.error(JSON.stringify({
-      mcpServers: {
-        gunsnation: {
-          command: 'npx',
-          args: ['gunsnation-mcp'],
-          env: { GUNSNATION_API_KEY: 'your_key_here' },
-        },
-      },
-    }, null, 2));
-    process.exit(1);
+    console.error('Warning: GUNSNATION_API_KEY not set. Server will start but tools will return errors.');
   }
-
-  const apiUrl = process.env.GUNSNATION_API_URL;
 
   const server = new GunsnationMcpServer(apiKey, apiUrl);
   await server.run();
