@@ -4,14 +4,15 @@
   "tags": ["firearms", "catalog", "search", "e-commerce"],
   "vendor": "DynamicDeals",
   "sourceUrl": "https://github.com/DynamicDeals/mcp-server-gunsnation",
+  "homepage": "https://gunsnation.com",
   "tools": [
     {
       "name": "search_firearms",
-      "description": "Search the Gunsnation catalog for firearms by name, category, or specifications"
+      "description": "Search the Gunsnation catalog for firearms by name, category, caliber, or price range"
     },
     {
       "name": "get_firearm",
-      "description": "Get detailed specifications for a specific firearm by ID"
+      "description": "Get detailed specifications for a specific firearm by ID including pricing from multiple vendors"
     }
   ]
 }
